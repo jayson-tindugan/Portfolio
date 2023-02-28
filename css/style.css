@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* 
+NOTES: @media
+36 em == 576 px -> mobile
+48 em == 768 px -> tablets
+62 em == 992 px -> large screen tablets and small scree desktop
+75 em == 1200 px -> desktop
+87.5 em == 1400 px -> larger screens 
+
+NOTES: rem to px computation
+0.0625 rem = 1px
+0.125 rem = 2px
+0.25 rem = 4px
+0.5 rem = 8px
+1 rem = 16px 
+2 rem = 32px
+*/
+
+/* 
+utility classes start 
+add/edit utility class below this code
+*/
+.container {
+    margin: 1rem;
+}
+.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.m {
+    margin: 1rem;
+}
+.m-left {
+    margin-left: 1rem;
+}
+.m-right {
+    margin-right: 1rem;
+}
+.m-top {
+    margin-top: 1rem;
+}
+.m-bot {
+    margin-bottom: 1rem;
+}
+.p {
+    padding: 1rem;
+}
+.p-top {
+    padding-top: 1rem;
+}
+.p-bot {
+    padding-bottom: 1rem;
+}
+.p-left {
+    padding-left: 1rem;
+}
+.p-right {
+    padding-right: 1rem;
+}
+hr {
+    height: 0.125rem;
+    background-color: #2b2d2e;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+.black {
+    color: #2b2d2e;
+}
+.bg-black {
+    background-color: #2b2d2e;
+}
+.gray {
+    color: #e0e3e3;
+}
+.bg-gray {
+    background-color: #e0e3e3;
+}
+.white {
+    color: #ffffff;
+}
+.orange {
+    color: #f0a418;
+}
+.point {
+    cursor: pointer;
+}
+.txt-justify {
+    text-align: justify;
+}
+.divider {
+    max-width: 100%;
+}
+.blue-gradient {
+    background-image: linear-gradient(
+        to right bottom,
+        #00c6fb,
+        #00affe,
+        #0097ff,
+        #007bf9,
+        #005bea
+    );
+}
+.red-gradient {
+    background-image: linear-gradient(
+        to right top,
+        #ff0844,
+        #ff5253,
+        #ff7766,
+        #ff957d,
+        #ffb199
+    );
+}
+.pink-gradient {
+    background-image: linear-gradient(
+        to right top,
+        #a6c0fe,
+        #c5aef2,
+        #e29ad7,
+        #f489b1,
+        #f68084
+    );
+}
+.sea-gradient {
+    background-image: linear-gradient(
+        to left bottom,
+        #2af598,
+        #00e7cd,
+        #00d3f6,
+        #00bbff,
+        #009efd
+    );
+}
+/* utility classes end */
+
+/* edit css below this code */
+/* header */
+.navHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+}
+.navHeader .logo {
+    letter-spacing: 0.25rem;
+    font-size: 1rem;
+}
+.navContainer {
+    display: flex;
+    align-items: center;
+}
+.navContainer ul {
+    display: none;
+}
+.navContainer ul li {
+    list-style: none;
+    letter-spacing: 0.125em;
+    cursor: pointer;
+    font-size: 1rem;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+nav a:hover {
+    border-bottom: 0.25rem #f0a418 solid;
+    color: #f0a418;
+}
+.toggleBtn .fa-solid {
+    font-size: 1.5rem;
+}
+.toggleBtn .fa-solid:hover {
+    color: #f0a418;
+    font-size: 1.75rem;
+}
+.modal {
+    margin: auto auto;
+    padding: 2rem;
+    border: 0;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+.modal::backdrop {
+    background-color: #2b2d2e;
+    opacity: 0.6;
+}
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-family: serif;
+}
+.modalBody {
+    font-size: 1rem;
+}
+.modalHeader .fa-solid:hover {
+    color: rgb(247, 61, 61);
+}
+/* hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heroDetails h2 {
+    font-weight: 900;
+    font-size: 1.62 5rem;
+    letter-spacing: 0.0625rem;
+}
+.heroDetails p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+    font-style: italic;
+}
+.hero .myImg img {
+    display: none;
+    height: 10rem;
+    border-radius: 50%;
+}
+.btnWrapper {
+    margin-top: 0.75rem;
+}
+.btnWrapper .btnRead {
+    background: #f0a418;
+    border: none;
+    font-size: 1rem;
+    padding: 0.625rem;
+    border-radius: 0.75rem;
+}
+.btnWrapper .btnRead:hover {
+    background: #a06a05;
+    color: #e0e3e3;
+}
+.btnWrapper .btnProj {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.625rem;
+    border-radius: 0.75rem;
+    color: #f0a418;
+}
+.btnWrapper .btnProj:hover {
+    background: #f0a418;
+    color: #2b2d2e;
+}
+.modal {
+    padding: 1rem;
+    max-width: 70ch;
+}
+
+/* about section */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+}
+.head .btnResume {
+    border: none;
+    background-color: #2b2d2e;
+    border-radius: 2rem;
+    color: #e0e3e3;
+    letter-spacing: 0.125rem;
+    transition: 0.3s;
+    font-size: 0.75rem;
+}
+.head .btnResume:hover {
+    background-color: #fff;
+    border-radius: 2rem;
+    color: #2b2d2e;
+}
+.abtBody {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        "1"
+        "2"
+        "3";
+}
+.abtBody:nth-child(1) {
+    grid-area: 1;
+}
+.abtBody:nth-child(2) {
+    grid-area: 2;
+}
+.abtBody:nth-child(3) {
+    grid-area: 3;
+}
+.card {
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 1.125rem;
+    padding: 2rem;
+    transition: 0.3s;
+}
+.cardBody {
+    text-indent: 3rem;
+}
+.card:hover {
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        to left bottom,
+        #2af598,
+        #00e7cd,
+        #00d3f6,
+        #00bbff,
+        #009efd
+    );
+}
+.cardHeader {
+    display: flex;
+    font-family: serif;
+    font-size: 1.125rem;
+    color: rgba(43, 45, 46, 0.7);
+}
+.cardBody {
+    line-height: 1.5rem;
+    letter-spacing: 0.0625rem;
+    font-size: 1rem;
+}
+.achieve .btnWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+.achieve .msgBtn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #005bea;
+    border: none;
+    border-radius: 0.25rem;
+    transition: 0.3s;
+}
+.achieve .msgBtn:hover {
+    background-color: #2af598;
+    color: #2b2d2e;
+}
+/* contact section */
+.contact {
+    padding-bottom: 2rem;
+}
+.conBody {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        "1"
+        "2"
+        "3";
+}
+.conBody:nth-child(1) {
+    grid-area: 1;
+}
+.conBody:nth-child(2) {
+    grid-area: 2;
+}
+.conBody:nth-child(3) {
+    grid-area: 3;
+}
+.conCard {
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    transition: 0.3s;
+}
+.conBody .imgWrapper {
+    display: none;
+    justify-content: center;
+}
+.conBody .imgWrapper img {
+    display: flex;
+    padding: 2rem;
+    height: 20rem;
+}
+.contactMeWrapper form .conContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: serif;
+    font-size: 1.125rem;
+}
+.contactMeWrapper form textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    resize: none;
+    font-family: sans-serif;
+    letter-spacing: 0.0625rem;
+    border: none;
+    outline: none;
+}
+.conBtn {
+    display: flex;
+    justify-content: end;
+}
+.contactMeWrapper form .msgBtn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #005bea;
+    border: none;
+    border-radius: 0.25rem;
+    transition: 0.3s;
+}
+.contactMeWrapper form .msgBtn:hover {
+    background-color: #2af598;
+    color: #2b2d2e;
+}
+.socMedHead {
+    display: flex;
+    justify-content: center;
+    font-family: serif;
+    font-size: 1.125rem;
+}
+.socMedBody h4 {
+    font-size: 1rem;
+}
+.socMedBody a {
+    text-decoration: none;
+    padding-left: 6rem;
+    color: #2b2d2e;
+    transition: 0.3s;
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+}
+.socMedBody a:hover {
+    color: #005bea;
+}
+.fa-facebook {
+    color: #005bea;
+}
+.fa-linkedin,
+.fa-twitter {
+    color: #0097ff;
+}
+.fa-square-instagram {
+    background-image: linear-gradient(
+        to right top,
+        #4f5bd5,
+        #962fbf,
+        #d62976,
+        #fa7e1e,
+        #feda75
+    );
+}
+/* footer */
+.footer {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-family: serif;
+}
+
+/* edit mediaquery below this code */
+/* mobile */
+@media screen and (min-width: 36em) {
+    .toggleBtn .fa-solid {
+        font-size: 1.75rem;
+    }
+    .toggleBtn .fa-solid:hover {
+        color: #f0a418;
+        font-size: 1.875rem;
+    }
+    /* hero section */
+    .hero {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .heroDetails h2 {
+        font-size: 1.75rem;
+    }
+    .heroDetails p,
+    .btnWrapper .btnRead,
+    .btnWrapper .btnProj {
+        font-size: 1.125rem;
+    }
+    .hero .myImg img {
+        display: flex;
+    }
+    .cardHeader {
+        font-size: 1.25rem;
+    }
+    .cardBody {
+        font-size: 1.125rem;
+    }
+    .head {
+        font-size: 1.375rem;
+    }
+    .head .btnResume {
+        font-size: 0.875rem;
+    }
+    .contactMeWrapper form .conContent h3,
+    .socMedHead {
+        font-size: 1.25rem;
+    }
+    .socMedBody h4,
+    .socMedHead a {
+        font-size: 1.0625rem;
+    }
+}
+/* tablet */
+@media screen and (min-width: 48em) {
+    .modalHeader {
+        font-size: 1.375rem;
+    }
+    .modalBody {
+        font-size: 1.125rem;
+    }
+    .navHeader .logo {
+        font-size: 1.125rem;
+    }
+    .navContainer ul {
+        display: flex;
+        gap: 1rem;
+    }
+    .navContainer ul li {
+        font-size: 1.125rem;
+    }
+    .toggleBtn {
+        display: none;
+    }
+    /* hero section */
+    .hero {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .heroDetails h2 {
+        font-size: 1.875rem;
+    }
+    .heroDetails p,
+    .btnWrapper .btnRead,
+    .btnWrapper .btnProj {
+        font-size: 1.25rem;
+    }
+    .hero .myImg img {
+        height: 12rem;
+    }
+    /* about section */
+    .head {
+        font-size: 1.5rem;
+    }
+    .abtBody {
+        grid-template-areas:
+            "1 2"
+            "3 3";
+    }
+    /* contact section */
+    .conBody {
+        grid-template-areas:
+            "1 2"
+            "3 3";
+        grid-template-columns: 1fr 1fr;
+    }
+    .contactMeWrapper form .conContent h3,
+    .socMedHead {
+        font-size: 1.375rem;
+    }
+    .socMedBody h4,
+    .socMedHead a {
+        font-size: 1.125rem;
+    }
+    /* footer */
+    .footer {
+        font-size: 1.125rem;
+    }
+}
+/* large sreen tablet/small screen desktop */
+@media screen and (min-width: 62em) {
+    .navHeader .logo {
+        font-size: 1.25rem;
+    }
+    .navContainer ul li {
+        letter-spacing: 0.25rem;
+        font-size: 1.25rem;
+    }
+    /* hero section */
+    .heroDetails h2 {
+        font-size: 2rem;
+    }
+    .heroDetails p,
+    .btnWrapper .btnRead,
+    .btnWrapper .btnProj {
+        font-size: 1.25rem;
+    }
+    .hero .myImg img {
+        height: 14rem;
+    }
+    /* contact section */
+    .contactMeWrapper form .conContent h3,
+    .socMedHead {
+        font-size: 1.5rem;
+    }
+    .socMedBody h4,
+    .socMedHead a {
+        font-size: 1.25rem;
+    }
+}
+/* desktop */
+@media screen and (min-width: 75em) {
+    .modalHeader {
+        font-size: 1.5rem;
+    }
+    .modalBody {
+        font-size: 1.25rem;
+    }
+    .navHeader .logo {
+        font-size: 1.375rem;
+    }
+    .navContainer ul li {
+        font-size: 1.375rem;
+    }
+    /* hero section */
+    .heroDetails h2 {
+        font-size: 2.125rem;
+    }
+    .hero .myImg img {
+        height: 16rem;
+    }
+    .head {
+        font-size: 1.625rem;
+    }
+    .head .btnResume {
+        font-size: 1rem;
+    }
+    .abtBody {
+        grid-template-areas: "1 2 3";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .conBody .imgWrapper {
+        display: flex;
+    }
+    .conBody {
+        grid-template-areas: "1 2 3";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    /* footer */
+    .footer {
+        font-size: 1.25rem;
+    }
+}
+/* larger screens */
+@media screen and (min-width: 87.5em) {
+    .navHeader .logo {
+        font-size: 1.5rem;
+    }
+    .navContainer ul li {
+        font-size: 1.5rem;
+    }
+    /* hero section */
+    .heroDetails h2 {
+        font-size: 2.375rem;
+    }
+    .hero .myImg img {
+        height: 18rem;
+    }
+}
