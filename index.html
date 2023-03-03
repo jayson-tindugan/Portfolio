@@ -4,9 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- main css stylesheet -->
+        <meta name="author" content="Jayson P. Tindugan" />
+        <meta name="description" content="Personal Portfolio" />
+        <!-- main css style -->
         <link rel="stylesheet" href="css/style.css" />
-        <!-- font awesome link -->
+        <!-- fontawesome for icons -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -14,252 +16,217 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <!-- favicon -->
         <link rel="icon" type="x-icon/image" href="img/fairyTailLogo.png" />
         <title>Jay | Portfolio</title>
     </head>
     <body>
-        <!-- modal for readmore -->
-        <dialog class="modal black" id="modal">
-            <div class="modalHeader">
-                <h3>My Story</h3>
-                <i class="fa-solid fa-x point" id="close-modal"></i>
-            </div>
-            <br />
-            <div class="modalBody">
-                <p class="txt-justify">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Expedita libero necessitatibus quos laudantium quod est
-                    reprehenderit ex temporibus, repellendus quo labore modi
-                    molestias doloribus impedit architecto cum officiis suscipit
-                    laboriosam aliquid. Odit recusandae quia accusantium,
-                    perspiciatis deleniti voluptatem culpa alias labore natus
-                    voluptates ipsam quas harum tempore accusamus maxime! Atque,
-                    inventore? Possimus veniam non exercitationem optio?
-                </p>
-            </div>
-        </dialog>
-        <header class="navHeader bg-black sticky">
-            <div class="logo orange">
+        <header class="mainHeader">
+            <div class="logo">
                 <h1 class="m-left">Portfolio</h1>
             </div>
-            <nav class="navContainer">
+            <nav class="navbar m-right">
                 <ul>
-                    <li class="m-right">
-                        <a href="#hero">Home</a>
-                    </li>
-                    <li class="m-right">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="m-right">
-                        <a href="#contact">Contact</a>
-                    </li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="toggleBtn m-right white point">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
+                <button class="toggleBtn pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </nav>
         </header>
         <main>
-            <section class="hero bg-black white" id="hero">
+            <section class="hero" id="hero">
                 <div class="heroDetails">
-                    <h2>
+                    <h1>
                         Hi! I am, <br />
                         Jayson P. Tindugan
-                    </h2>
-                    <p class="gray">"Soon to be UX Designer"</p>
-                    <div class="btnWrapper">
-                        <button class="btnRead black point" id="open-modal">
-                            Read more...
-                        </button>
-                        <button class="btnProj gray point">
-                            Projects <i class="fa-brands fa-github"></i>
-                        </button>
+                    </h1>
+                    <p>"Soon to be UX Designer"</p>
+                    <div class="heroBtnWrapper m-top">
+                        <a href="#" class="heroBtn">Hire me</a>
+                        <a href="#" class="heroBtn"
+                            >Resume <i class="fa-solid fa-file"></i
+                        ></a>
                     </div>
                 </div>
-                <div class="myImg">
-                    <img src="img/jayson.jpg" alt="Tindugan's Photo" />
+                <div class="myImgWrapper">
+                    <img src="img/jayson.JPG" alt="Jayson's Photo" />
                 </div>
             </section>
-            <section class="about bg-gray" id="about">
-                <header class="head p-top p-bot p-left black">
-                    <h2>About</h2>
-                    <button class="btnResume point m-right p">
-                        Resume <i class="fa-solid fa-file"></i>
-                    </button>
+            <section class="about" id="about">
+                <dialog class="modal" id="modal">
+                    <header class="modalHeader">
+                        <button class="modalBtn" id="close-modal">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </button>
+                    </header>
+                    <div class="modalBody">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Similique, a distinctio. Mollitia nihil nemo
+                        sequi, fugiat aut eligendi saepe labore unde natus,
+                        recusandae tempora quasi veritatis accusamus commodi,
+                        iste suscipit sapiente deleniti dolores. Soluta eligendi
+                        autem nobis eum cupiditate, error enim, tenetur facere
+                        repellat adipisci dignissimos cumque suscipit nemo sed.
+                    </div>
+                </dialog>
+                <header class="abtHeader">
+                    <h1>About</h1>
                 </header>
-                <div class="abtBody p txt-justify">
-                    <section class="card skills">
-                        <div class="cardHeader p-top">
-                            <h3>
-                                Skills
-                                <i class="fa-solid fa-circle-check"></i>
-                            </h3>
-                        </div>
-                        <br />
-                        <div class="cardBody black point">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Architecto expedita quod recusandae at nemo
-                            laborum, rerum, consequatur accusamus vel libero
-                            adipisci doloremque voluptatem ullam animi quia rem
-                            omnis natus repudiandae. Neque, ipsa voluptatibus
-                            eius necessitatibus vero quia tempore numquam,
-                            eligendi ratione molestiae doloremque ipsum
-                            inventore reprehenderit quaerat illo fuga ut
-                            perspiciatis officia cumque? Rerum vel nobis
-                            asperiores laudantium similique, ad error sit minima
-                            accusantium possimus doloribus ab? Error, quibusdam.
-                            Sunt tempore, quasi libero sequi suscipit id illo
-                            vero fugiat odio, dolore aut magni. Esse similique
-                            possimus cumque. Ex quas praesentium itaque omnis
-                            voluptatum quaerat fugit eveniet amet voluptas
-                            reiciendis soluta molestiae tempora nostrum minus
-                            illo ducimus, porro quam ipsa eius.
-                        </div>
-                    </section>
-                    <section class="card achieve">
-                        <div class="cardHeader p-top">
-                            <h3>
-                                Achievements
-                                <i class="fa-solid fa-trophy"></i>
-                            </h3>
-                        </div>
-                        <br />
-                        <div class="cardBody black point">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Nam ea nobis dolorum eius dignissimos. Maiores
-                            officia illum sunt, distinctio necessitatibus modi
-                            quod ipsam. Aliquam sequi quisquam illum minima quo
-                            est, omnis eveniet ullam dolore unde, similique
-                            soluta nam natus minus fugiat animi deserunt dicta,
-                            porro exercitationem perspiciatis? Tempora rerum
-                            consequuntur quos veniam, ducimus cumque hic ipsa
-                            vitae! Deserunt illo quidem repudiandae sunt ut quae
-                            consequuntur aperiam, mollitia laboriosam provident,
-                            dolores nulla perspiciatis, quo autem corrupti
-                            cumque? Vel quibusdam repudiandae itaque praesentium
-                            a, veritatis dignissimos quo labore suscipit atque
-                            dolore maxime.
-                        </div>
-                        <div class="btnWrapper">
-                            <button class="msgBtn p white point">
-                                View more...
+                <div class="abtBody">
+                    <div class="abtImg">
+                        <img src="img/gradPic.jpg" alt="Jayson's Grad Pic" />
+                    </div>
+                    <div class="abtDetails p-lg">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatem voluptatibus tempore unde dolorem, error
+                        officia eligendi nam libero ex omnis? Eos, pariatur
+                        facere. Atque esse doloremque nobis ipsa expedita
+                        perferendis tenetur voluptas ex doloribus ipsam ad
+                        labore molestias officia cupiditate dignissimos nihil
+                        deserunt fugit assumenda vitae porro unde, illo
+                        deleniti?
+                        <div class="abtBtnWrapper m-top">
+                            <button class="abtBtn" id="open-modal">
+                                Read more...
                             </button>
                         </div>
-                    </section>
-                    <section class="card hobby">
-                        <div class="cardHeader p-top">
-                            <h3>
-                                Hobbies
-                                <i class="fa-solid fa-baseball"></i>
-                            </h3>
-                        </div>
-                        <br />
-                        <div class="cardBody black point">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Cum eligendi officiis nisi repellat numquam
-                            sequi odit. Architecto quia illum, nam consequuntur
-                            quisquam, eaque excepturi ullam nobis aut possimus
-                            quis? Quisquam nobis quos quas adipisci. Eius
-                            recusandae aut, non eos tempore illum voluptatum
-                            odio sit saepe deserunt laudantium ullam veritatis
-                            placeat quibusdam quaerat eveniet ea nam labore
-                            exercitationem iste, quis esse beatae pariatur fuga!
-                            Sequi at fugit voluptate perferendis dicta rem iusto
-                            nihil amet velit. Explicabo vitae veniam libero
-                            inventore minus cupiditate quos minima cumque
-                            voluptatum laudantium omnis saepe consectetur
-                            dignissimos accusantium, architecto ab. Eaque aut
-                            dolore ab libero nulla beatae ad facilis voluptatem
-                            illo voluptatibus non, fuga enim tempora aperiam!
-                        </div>
-                    </section>
+                    </div>
                 </div>
             </section>
-            <section class="contact bg-gray black p-left p-right" id="contact">
-                <header class="conHeader">
-                    <header class="head p-top p-bot p-left">
-                        <h2>Contact</h2>
-                    </header>
+            <section class="projects p" id="project">
+                <header class="projHeader m-bot">
+                    <h1>Previous Projects</h1>
                 </header>
-                <div class="conBody">
-                    <div class="imgWrapper">
-                        <img
-                            src="img/gradPic.jpg"
-                            alt="Tindugan's Graduation Picture"
-                        />
-                    </div>
-                    <div class="conCard contactMeWrapper">
-                        <form>
-                            <div class="conContent">
-                                <div class="conHead">
-                                    <h3>Message Me</h3>
-                                </div>
-                                <textarea
-                                    placeholder="Insert message....."
-                                ></textarea>
-                            </div>
-                            <div class="conBtn m-top">
-                                <button
-                                    class="msgBtn p white point"
-                                    type="button"
-                                >
-                                    Message
-                                </button>
-                                <button
-                                    class="msgBtn p m-left white point"
-                                    type="button"
-                                >
-                                    Call Me
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="conCard socMed p">
-                        <header class="socMedHead m-bot">
-                            <h3 class="black">Reach Out via:</h3>
+                <div class="projBody">
+                    <div class="card">
+                        <header class="cardHeader">
+                            <img src="img/fairyTailLogo.png" alt="" />
+                            <h2>Suzane Resort</h2>
                         </header>
-                        <div class="socMedBody">
-                            <div class="fb m-bot">
-                                <h4>
-                                    <i class="fa-brands fa-facebook"></i>
-                                    Facebook
-                                </h4>
-                                <a href="#">jayson.tindugan@facebook.com</a>
+                        <div class="cardBody">
+                            <hr class="m-top m-bot" />
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Laboriosam, eaque, ducimus enim doloribus unde
+                            minus, ut sit voluptate atque fugit qui praesentium.
+                            Harum veniam magnam esse perferendis enim omnis a.
+                            <div class="projBtnWrapper">
+                                <button class="projBtn">
+                                    View <i class="fa-solid fa-eye"></i>
+                                </button>
                             </div>
-                            <div class="linkIn m-bot">
-                                <h4>
-                                    <i class="fa-brands fa-linkedin"></i>
-                                    LinkedIn
-                                </h4>
-                                <a href="#">jayson.tindugan@linkedin.com</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <header class="cardHeader">
+                            <img src="img/fairyTailLogo.png" alt="" />
+                            <h2>J.H.E. Dental Clinic</h2>
+                        </header>
+                        <div class="cardBody">
+                            <hr class="m-top m-bot" />
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Laboriosam, eaque, ducimus enim doloribus unde
+                            minus, ut sit voluptate atque fugit qui praesentium.
+                            Harum veniam magnam esse perferendis enim omnis a.
+                            <div class="projBtnWrapper">
+                                <button class="projBtn">
+                                    View <i class="fa-solid fa-eye"></i>
+                                </button>
                             </div>
-                            <div class="twitter m-bot">
-                                <h4>
-                                    <i class="fa-brands fa-twitter"></i> Twitter
-                                </h4>
-                                <a href="#">@jayTindugan</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <header class="cardHeader">
+                            <img src="img/fairyTailLogo.png" alt="" />
+                            <h2>Qualitech</h2>
+                        </header>
+                        <div class="cardBody">
+                            <hr class="m-top m-bot" />
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Laboriosam, eaque, ducimus enim doloribus unde
+                            minus, ut sit voluptate atque fugit qui praesentium.
+                            Harum veniam magnam esse perferendis enim omnis a.
+                            <div class="projBtnWrapper">
+                                <button class="projBtn">
+                                    View <i class="fa-solid fa-eye"></i>
+                                </button>
                             </div>
-                            <div class="insta">
-                                <h4>
-                                    <i
-                                        class="fa-brands fa-square-instagram"
-                                    ></i>
-                                    Instagram
-                                </h4>
-                                <a href="#">@Rin</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <header class="cardHeader">
+                            <img src="img/fairyTailLogo.png" alt="" />
+                            <h2>Qualitech</h2>
+                        </header>
+                        <div class="cardBody">
+                            <hr class="m-top m-bot" />
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Laboriosam, eaque, ducimus enim doloribus unde
+                            minus, ut sit voluptate atque fugit qui praesentium.
+                            Harum veniam magnam esse perferendis enim omnis a.
+                            <div class="projBtnWrapper">
+                                <button class="projBtn">
+                                    View <i class="fa-solid fa-eye"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
-        <footer class="footer bg-black white">
-            <div>
-                <p class="m-left">2023 Copyright WebDev PH</p>
+            <section class="contact" id="contact">
+                <header class="conHeader p">
+                    <h1>Get in Touch</h1>
+                    <br />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Molestias modi assumenda nam et ipsam laudantium
+                        quidem. Eum necessitatibus quasi cumque?
+                    </p>
+                </header>
+                <div class="conContent m-top">
+                    <article>
+                        <i class="fa-solid fa-mobile"></i>
+                        <h2 class="m-bot">Phone</h2>
+                        <p>09319038889</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-envelope"></i>
+                        <h2 class="m-bot">Email</h2>
+                        <p>jayson.tindugan@gmail.com</p>
+                    </article>
+                    <article class="socMed">
+                        <h2 class="m-bot">Reach Out Via</h2>
+                        <p class="pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            jpt@linkedin.com
+                        </p>
+                        <p class="pointer">
+                            <i class="fa-brands fa-twitter"></i>
+                            rin@twitter.com
+                        </p>
+                        <p class="pointer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            rin@facebook.com
+                        </p>
+                    </article>
+                </div>
+            </section>
+            <div class="goTopWrapper">
+                <button
+                    class="goTop pointer"
+                    id="goTop"
+                    onclick="topFunction()"
+                >
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
             </div>
-            <div class="m-right">Made by @Rin</div>
+        </main>
+        <footer class="p-right p-left">
+            <div class="copyright">2023 Copyright WebDev PH</div>
+            <div class="signature">Developed by: @Rin</div>
         </footer>
-        <script src="js/index.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
